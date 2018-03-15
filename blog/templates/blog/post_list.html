@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My blog</title>
-</head>
-<body>
-<p> hi there </p>
-<p> It works </p>>
+<div>
+    <h1><a href = "/"> Blog </a></h1>
+</div>
 
-</body>
-</html>
+{% for post in posts %}
+<div>
+    <p>published : {{post.published_date}}</p>
+    <h1> <a href = " "> {{post.title}} </a></h1>
+    <p>{{post.text|linebreaksbr}}</p>
+</div>
+{% endfor %}
+</div>
